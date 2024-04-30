@@ -1,3 +1,4 @@
 FROM tomcat:8.0
-MAINTAINER ramesh
+MAINTAINER bhanu
+EXPOSE 8080
 COPY **/**.war /usr/local/tomcat/webapps/
