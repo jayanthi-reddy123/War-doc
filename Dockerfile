@@ -1,4 +1,5 @@
-FROM tomcat:8.0
-MAINTAINER jayanthi
+FROM tomcat:9
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY target/onlinebookstore.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
-COPY target/CounterWebApp.war /usr/local/tomcat/webapps/ROOT.war
+CMD ["catalina.sh", "run"]
