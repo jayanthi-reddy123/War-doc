@@ -1,5 +1,5 @@
 
 FROM tomcat:8.0
-MAINTAINER jayanthi
-EXPOSE 8080
-COPY target/CounterWebApp.war /usr/local/tomcat/webapps/
+ADD **/*.war /usr/local/tomcat/webapps/
+EXPOSE 8083
+CMD ["catalina.sh", "run"]
