@@ -1,5 +1,5 @@
-FROM tomcat:9
-RUN rm -rf /usr/local/tomcat/webapps/*
-COPY target/War-doc.war /usr/local/tomcat/webapps/
+
+FROM tomcat:8.0
+MAINTAINER jayanthi
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+COPY target/CounterWebApp.war /usr/local/tomcat/webapps/
